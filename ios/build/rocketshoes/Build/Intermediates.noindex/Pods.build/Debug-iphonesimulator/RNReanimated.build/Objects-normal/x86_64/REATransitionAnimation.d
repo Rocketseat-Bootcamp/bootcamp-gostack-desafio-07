@@ -1,0 +1,4 @@
+dependencies: \
+  /Users/douglassantos/Desktop/workspace/rocketseat-bootcamp/desafios/bootcamp-gostack-desafio-07/node_modules/react-native-reanimated/ios/Transitioning/REATransitionAnimation.m \
+  /Users/douglassantos/Desktop/workspace/rocketseat-bootcamp/desafios/bootcamp-gostack-desafio-07/ios/Pods/Target\ Support\ Files/RNReanimated/RNReanimated-prefix.pch \
+  /Users/douglassantos/Desktop/workspace/rocketseat-bootcamp/desafios/bootcamp-gostack-desafio-07/node_modules/react-native-reanimated/ios/Transitioning/REATransitionAnimation.h

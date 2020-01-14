@@ -5,6 +5,41 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>B348C5FB-55D7-43EE-AFB3-21C5D695C0E8</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B348C5FB-55D7-43EE-AFB3-21C5D695C0E8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>rocketshoes project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>rocketshoes</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace rocketshoes with scheme rocketshoes and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>600732917.87199199</real>
+			<key>timeStoppedRecording</key>
+			<real>600732919.580953</real>
+			<key>title</key>
+			<string>Building workspace rocketshoes with scheme rocketshoes and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>B348C5FB-55D7-43EE-AFB3-21C5D695C0E8</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
