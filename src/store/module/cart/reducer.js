@@ -4,7 +4,7 @@ export default function cart(state = [], action) {
   const ACTIONS = {
     '@cart/ADD_SUCCESS': () =>
       producer(state, draft => {
-        const { product } = action;
+        const {product} = action;
         draft.push(product);
       }),
     '@cart/REMOVE': () =>

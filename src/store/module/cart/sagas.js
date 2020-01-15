@@ -1,3 +1,4 @@
+import {Alert} from 'react-native';
 import {call, select, put, all, takeLatest} from 'redux-saga/effects';
 
 import api from '../../../services/api';
@@ -15,6 +16,8 @@ function* addToCart({id}) {
   const amount = currentAmount + 1;
 
   if (amount > stockAmount) {
+    Alert.alert('Quantidade solicitada fora de estoque');
+
     return;
   }
 
@@ -40,6 +43,8 @@ function* updateAmount({id, amount}) {
   const stockAmount = stock.data.amount;
 
   if (amount > stockAmount) {
+    Alert.alert('Quantidade solicitada fora de estoque');
+
     return;
   }
 

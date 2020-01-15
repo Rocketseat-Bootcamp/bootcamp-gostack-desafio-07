@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
+
 import {formatPrice} from '../../utils/format';
+import * as action from '../../store/module/cart/actions';
 
 import {
   Container,
@@ -15,7 +20,7 @@ import {
   Amount,
   AmountProduct,
 } from './styles';
-export default class Main extends Component {
+class Main extends Component {
   state = {
     products: [],
   };
@@ -51,12 +56,11 @@ export default class Main extends Component {
               <ProductImg source={{uri: item.image}} />
               <Title>{item.title}</Title>
               <Price>{item.priceFormatted}</Price>
-              <AddProductButton onPress={() => this.handleAddProduct(product)}>
+              <AddProductButton onPress={() => this.handleAddProduct(item.id)}>
                 <Amount>
                   <Icon name="add-shopping-cart" size={20} color="#FFF" />
-                  <AmountProduct> 0 </AmountProduct>
+                  <AmountProduct> {amount[item.id] || 0} </AmountProduct>
                 </Amount>
-                {/* <Amount>{amount[item.id] || 0}</Amount> */}
                 <TextAddProductButton>
                   ADICIONAR AO CARRINHO
                 </TextAddProductButton>
@@ -68,3 +72,14 @@ export default class Main extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  amount: state.cart.reduce((amount, p) => {
+    amount[p.id] = p.amount;
+    return amount;
+  }, {}),
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators(action, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
