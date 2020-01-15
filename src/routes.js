@@ -6,11 +6,13 @@ import Header from './components/Header';
 import colors from './styles/colors';
 
 import Main from './pages/Main';
+import Cart from './pages/Cart';
 
 const Routes = createAppContainer(
   createStackNavigator(
     {
       Main,
+      Cart,
     },
     {
       headerLayoutPreset: 'center',

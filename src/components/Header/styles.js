@@ -1,7 +1,7 @@
-import styled from "styled-components/native";
-import colors from "../../styles/colors";
+import styled from 'styled-components/native';
+import colors from '../../styles/colors';
 
-import logo from "../../assets/image/logo.png";
+import logo from '../../assets/image/logo.png';
 
 export const Wrapper = styled.SafeAreaView`
   flex: 0;
@@ -16,9 +16,11 @@ export const Container = styled.View`
   padding: 20px;
 `;
 
+export const LogoContainer = styled.TouchableOpacity``;
+
 export const Logo = styled.Image.attrs({
   source: logo,
-  resizeMode: "cover"
+  resizeMode: 'cover',
 })`
   width: 185px;
   height: 24px;
