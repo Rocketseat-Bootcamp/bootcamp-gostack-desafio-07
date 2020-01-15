@@ -2,7 +2,7 @@ import {Alert} from 'react-native';
 import {call, select, put, all, takeLatest} from 'redux-saga/effects';
 
 import api from '../../../services/api';
-// import history from '../../../services/history';
+import navigation from '../../../services/navigation';
 import {formatPrice} from '../../../utils/format';
 import {addToCartSuccess, updateAmountSuccess} from './actions';
 
@@ -33,7 +33,8 @@ function* addToCart({id}) {
 
     yield put(addToCartSuccess(data));
   }
-  // history.push('/carrinho');
+
+  navigation.navigate('Cart');
 }
 
 function* updateAmount({id, amount}) {
@@ -44,7 +45,6 @@ function* updateAmount({id, amount}) {
 
   if (amount > stockAmount) {
     Alert.alert('Quantidade solicitada fora de estoque');
-
     return;
   }
 

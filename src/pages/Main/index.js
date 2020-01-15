@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import NavigationService from '../../services/navigation';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
 
